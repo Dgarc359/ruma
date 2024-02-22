@@ -1,3 +1,5 @@
+use serde::Deserialize;
+
 //! `PUT /_matrix/app/*/ping`
 //!
 //! Endpoint to ping the application service.
@@ -24,7 +26,7 @@ pub mod v1 {
 
     /// Request type for the `send_ping` endpoint.
     #[request]
-    #[derive(Default)]
+    #[derive(Default, Deserialize)]
     pub struct Request {
         /// A transaction ID for the ping, copied directly from the `POST
         /// /_matrix/client/v1/appservice/{appserviceId}/ping` call.
