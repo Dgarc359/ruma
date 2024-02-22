@@ -1,5 +1,3 @@
-use serde::Deserialize;
-
 //! `PUT /_matrix/app/*/ping`
 //!
 //! Endpoint to ping the application service.
@@ -9,6 +7,7 @@ pub mod v1 {
     //!
     //! [spec]: https://spec.matrix.org/latest/application-service-api/#post_matrixappv1ping
 
+    use serde::Deserialize;
     use ruma_common::{
         api::{request, response, Metadata},
         metadata, OwnedTransactionId,
